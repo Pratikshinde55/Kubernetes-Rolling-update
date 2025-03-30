@@ -44,6 +44,13 @@ version v4 -->> version v3        version v2 -->> version v1
 - 3rd This process repeat again again untill all new version-v2 Pods replaces with older version-v1 Pods.
 - This Rolling Update strategy ensures that application stay available & client do not experience downtime.
 
+## Deployment:
+- Deployment is one of the best resource type of K8s .
+- Deployment resource type gives RollingUpdate & Recreate Strategy.
+- Deployment also gives support ReplicaSet in-bild resorce type, So by using Deployment resource type we can easily maintain desired Pods numbers.
+- As we know, ReplicaSet does not know which is Older version-v1 which is newer version-v2, So while RollOut using RollingUpdate Strategy Deployment one who maintain or understand which is older version and which
+  is newer version Pod, So Deployment Resource Type is used.
+- by default Strategy is RollingUpdate.
 
-
+  
 
