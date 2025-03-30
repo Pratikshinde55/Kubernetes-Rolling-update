@@ -52,6 +52,6 @@ version v4 -->> version v3        version v2 -->> version v1
   is newer version Pod, So Deployment Resource Type is used.
 - by default Strategy is RollingUpdate.
 
- **Deployment**  ---create--->>  **ReplicaSet**  ---create/maintain--->>  **Pods**
+ **Deployment**  ---create--->>  **ReplicaSet**  ---create/maintain--->>  **Pods**  ---launch--->> **Container**  ---run--->>  **Application**
   
 
