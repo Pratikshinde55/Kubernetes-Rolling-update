@@ -13,5 +13,16 @@ Switch to older version like version v3 to version v2 this is rollback. This als
 
 version v4 -->> version v3        version v2 -->> version v1
 
+- Note:
 
+  The  challenge is how to rollout without **downtime**. We need a strategy to ensure thye application is always available.
+  
+           - Rolling Update Deployment / Ramped Deployment
+           - Recreate Deployment
+           - Blue-Green Deployment
+           - Canary Deployment
+           - A/B testing Deployment
+           - Shadow Deployment / Dark Launching
+           - Big Bang Deployment
+           - CD 
 
