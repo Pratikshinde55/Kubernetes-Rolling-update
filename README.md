@@ -55,3 +55,12 @@ version v4 -->> version v3        version v2 -->> version v1
  **Deployment**  ---create--->>  **ReplicaSet**  ---create/maintain--->>  **Pods**  ---launch--->> **Container**  ---run--->>  **Application**
   
 
+# Rolling Update Deployment Strategy working:
+For this Project i used minikube K8s platform.
+
+## Steps:
+1. Create Deployment YAML file.
+2. Create Service YAMl Code using NodePort type.
+3. Roll out- Now we add new version of image in Deployment.
+4. Roll Back (Undo) -
+5. Automation file
