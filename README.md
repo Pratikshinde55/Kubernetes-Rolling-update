@@ -77,6 +77,6 @@ For this Project i used minikube K8s platform.
 
 ...
 
-<a name="some-id" />
+<a name="1" />
 
 ##### Section with some ID
