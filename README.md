@@ -47,7 +47,7 @@ version v4 -->> version v3        version v2 -->> version v1
 
 
 
-##  <a id="deployment-section"></a>Deployment:
+## Deployment:
 - Deployment is one of the best resource type of K8s .
 - Deployment resource type gives RollingUpdate & Recreate Strategy.
 - Deployment also gives support ReplicaSet in-bild resorce type, So by using Deployment resource type we can easily maintain desired Pods numbers.
@@ -68,13 +68,3 @@ For this Project i used minikube K8s platform.
 4. Roll Back (Undo) -
 5. Automation file
 
-.
-.
-.
-.
-...
-.
-
-.
-
-[Jump to Deployment Section](#deployment-section)
