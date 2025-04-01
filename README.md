@@ -64,3 +64,19 @@ For this Project i used minikube K8s platform.
 3. Roll out- Now we add new version of image in Deployment.
 4. Roll Back (Undo) -
 5. Automation file
+
+
+
+
+
+
+
+
+
+#### I am working on a new project. [^1]
+[^1]: Stack is: React, Typescript, Tailwind CSS  
+
+Project is about music & movies.
+
+##### Hope you will like it. [^see]
+[^see]: Loading... ⌛️
