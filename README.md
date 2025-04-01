@@ -73,10 +73,9 @@ For this Project i used minikube K8s platform.
 
 
 
-[Jump to a section with custom ID](#some-id)
+[Jump to a section with custom ID](1)
 
 ...
 
 <a name="1" />
 
-##### Section with some ID
