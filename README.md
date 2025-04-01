@@ -73,10 +73,10 @@ For this Project i used minikube K8s platform.
 
 
 
-#### I am working on a new project. [^1]
-[^1]: Stack is: React, Typescript, Tailwind CSS  
+[Jump to a section with custom ID](#some-id)
 
-Project is about music & movies.
+...
 
-##### Hope you will like it. [^see]
-[^see]: Loading... ⌛️
+<a name="some-id" />
+
+##### Section with some ID
