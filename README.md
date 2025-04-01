@@ -28,6 +28,7 @@ version v4 -->> version v3        version v2 -->> version v1
 - [ ] Big Bang Deployment
 - [ ] CD 
 
+[Deployment](123)
 *But, Kubernetes in-build supports only two that is RollingUpdate Deployment & Recreate Deployment Strategy.*
 
 ## Recreate Deployment strategy:
@@ -44,7 +45,7 @@ version v4 -->> version v3        version v2 -->> version v1
 - 3rd This process repeat again again untill all new version-v2 Pods replaces with older version-v1 Pods.
 - This Rolling Update strategy ensures that application stay available & client do not experience downtime.
 
-## Deployment:
+## Deployment <a name="123" /> :
 - Deployment is one of the best resource type of K8s .
 - Deployment resource type gives RollingUpdate & Recreate Strategy.
 - Deployment also gives support ReplicaSet in-bild resorce type, So by using Deployment resource type we can easily maintain desired Pods numbers.
@@ -59,7 +60,7 @@ version v4 -->> version v3        version v2 -->> version v1
 For this Project i used minikube K8s platform.
 
 ## Steps:
-1. <a name="1" /> Create Deployment YAML file.
+1. Create Deployment YAML file.
 2. Create Service YAMl Code using NodePort type.
 3. Roll out- Now we add new version of image in Deployment.
 4. Roll Back (Undo) -
