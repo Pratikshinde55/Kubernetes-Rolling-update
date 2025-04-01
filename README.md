@@ -45,7 +45,7 @@ version v4 -->> version v3        version v2 -->> version v1
 - 3rd This process repeat again again untill all new version-v2 Pods replaces with older version-v1 Pods.
 - This Rolling Update strategy ensures that application stay available & client do not experience downtime.
 
-[Jump to Deployment Section](#deployment)
+
 
 ## Deployment :
 - Deployment is one of the best resource type of K8s .
@@ -68,17 +68,19 @@ For this Project i used minikube K8s platform.
 4. Roll Back (Undo) -
 5. Automation file
 
-
-
-
-
-
-
-
-
-[Jump to a section with custom ID](1)
-
+.
+.
+.
+.
 ...
+.
+
+.
 
 
+
+
+
+
+ [Jump to Deployment Section](#deployment)
 
