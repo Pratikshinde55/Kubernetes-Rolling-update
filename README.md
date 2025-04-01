@@ -28,7 +28,6 @@ version v4 -->> version v3        version v2 -->> version v1
 - [ ] Big Bang Deployment
 - [ ] CD 
 
-[Jump to Deployment Section](#deployment)
 
 *But, Kubernetes in-build supports only two that is RollingUpdate Deployment & Recreate Deployment Strategy.*
 
@@ -45,6 +44,8 @@ version v4 -->> version v3        version v2 -->> version v1
 - 2nd once new version-v2 Pod one copy run successfully then only delete older version-v1 Pod(Replica), And Client side traffic diverted to new version-v2 Pod without Downtime.
 - 3rd This process repeat again again untill all new version-v2 Pods replaces with older version-v1 Pods.
 - This Rolling Update strategy ensures that application stay available & client do not experience downtime.
+
+[Jump to Deployment Section](#deployment)
 
 ## Deployment :
 - Deployment is one of the best resource type of K8s .
