@@ -19,14 +19,14 @@ version v4 -->> version v3        version v2 -->> version v1
 
 **Deployment Strategies:**
 
-- Rolling Update Deployment / Ramped Deployment
-- Recreate Deployment
-- Blue-Green Deployment
-- Canary Deployment
-- A/B testing Deployment
-- Shadow Deployment / Dark Launching
-- Big Bang Deployment
-- CD 
+- [x] Rolling Update Deployment / Ramped Deployment
+- [x] Recreate Deployment
+- [ ] Blue-Green Deployment
+- [ ] Canary Deployment
+- [ ] A/B testing Deployment
+- [ ] Shadow Deployment / Dark Launching
+- [ ] Big Bang Deployment
+- [ ] CD 
 
 *But, Kubernetes in-build supports only two that is RollingUpdate Deployment & Recreate Deployment Strategy.*
 
