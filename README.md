@@ -184,14 +184,29 @@ We can also here do RollBack by using two methods:
 1. Online way (Use kubectl rollout undo command)
 2. Offline way (Go inside YAMl file and update older version image tag)
 
-
+- RoLL Back
 1. Online Way:
-     - kubectl rollout undo command:
+     - `kubectl rollout undo` command:(This command only do one roll back version that is v3 to v2 for current project)
   
-       kubectl rollout undo deployment ps-deploy
+             kubectl rollout undo deployment ps-deploy
 
         ![kubectl-rollout-undo](https://github.com/user-attachments/assets/e20d50d9-ed6f-4619-ba4e-e483575256e3)
             
+     - see on Client side Browser Client see older version v2 without downtime same things happens like RollOut:
 
+      ![browser-rollback](https://github.com/user-attachments/assets/a8a9f3eb-5bf2-4643-949d-2084c3ea7ae2)
 
+     - Now i Direct Roll Back to version v1 by using  `--to-revision=` this option:
+  
+            kubectl rollout undo deployment ps-deploy  --to-revision=1
+       
+        ![rollback-undo-v1](https://github.com/user-attachments/assets/85276255-3b03-47d4-bb8b-e3ed9e09bef2)
 
+      - See on Browser:
+
+        ![v1-broswer-byrollback-undo](https://github.com/user-attachments/assets/3446a5bb-f37d-4d98-94c6-924b570c50e3)
+
+2. We can do same roll back using offline file:
+
+     - Go inside YAML file and add old version of image & then apply that YAML file
+     - our RollBack completed 
