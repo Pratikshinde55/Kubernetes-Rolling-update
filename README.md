@@ -90,7 +90,7 @@ For this Project i used minikube K8s platform.
 
       kubectl describe deploy ps-deploy
 
-   ![describe-deploy](https://github.com/user-attachments/assets/37700687-6273-4f92-9360-150e0d618812)
+  ![Describe-deploy](https://github.com/user-attachments/assets/fa1f910e-809b-40cc-b153-7f3bc21c8943)
 
 - Here we can also see that Deployment creates ReplicSet and ReplicaSet creates Pods; And we also created Service:
   ![Svc](https://github.com/user-attachments/assets/bc6696c8-7412-43c9-84ea-a74b1b98d47f)
