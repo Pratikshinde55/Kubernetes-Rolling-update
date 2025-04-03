@@ -57,6 +57,7 @@ version v4 -->> version v3        version v2 -->> version v1
 
  **Deployment**  ---create--->>  **ReplicaSet**  ---create/maintain--->>  **Pods**  ---launch--->> **Container**  ---run--->>  **Application**
   
+*** 
 
 # Rolling Update Deployment Strategy working:
 For this Project i used minikube K8s platform.
