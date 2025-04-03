@@ -184,6 +184,7 @@ We can also here do RollBack by using two methods:
 1. Online way (Use kubectl rollout undo command)
 2. Offline way (Go inside YAMl file and update older version image tag)
 
+
 1. Online Way:
      - kubectl rollout undo command:
   
