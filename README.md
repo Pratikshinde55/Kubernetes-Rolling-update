@@ -143,7 +143,7 @@ For this Project i used minikube K8s platform.
   
    ![rollout-image-1](https://github.com/user-attachments/assets/e1634b62-b203-4c58-9688-fda50015499b)
 
-- kubectl rollout histroy cmd:
+- kubectl rollout history cmd:
 
       kubectl rollout history deploy ps-deploy
 
