@@ -132,3 +132,7 @@ For this Project i used minikube K8s platform.
       kubectl describe deploy ps-deploy
 
   ![describe-v2](https://github.com/user-attachments/assets/023dc455-23c8-44f0-a29f-a9458b285080)
+
+- We see new version on Browser:
+
+  ![new-v2-browser](https://github.com/user-attachments/assets/faafa3dc-723c-40d0-a065-7c493aedba52)
