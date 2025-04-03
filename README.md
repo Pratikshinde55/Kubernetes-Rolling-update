@@ -68,3 +68,26 @@ For this Project i used minikube K8s platform.
 4. Roll Back (Undo) -
 5. Automation file
 
+
+## Step 1: Deployment & Service resource type YAML file:
+- Here i use Deployment resource type for create pods and monitoring desired state of pods use ReplicaSet in Deploymnet, & Create NodePort type service load balancer for outside world connectivity.
+
+- Here i use version v1 of image, Deployment keep on monitoring that image version.
+
+  ![Code-deploy-svc](https://github.com/user-attachments/assets/9a71a571-dac7-47d8-8f1e-2898dcccf897)
+
+- Run File with v1 /tag v1 of image:
+
+        kubectl apply -f rolling-update.yml
+
+- Get Deploy cmd:
+
+         kubectl get deploy
+
+  ![Deploy-created](https://github.com/user-attachments/assets/9589c796-adcc-4613-b51e-7705b9f9e822)
+
+- Describe Deploy we see version v1 of image is used:
+
+        kubectl describe deploy ps-deploy
+
+
