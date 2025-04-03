@@ -103,51 +103,52 @@ For this Project i used minikube K8s platform.
 
 
 ## Step 2: Rollout with new version v2:
-**Manual/Offline Way:**
-- Now i use new version image that version v2 in my Deployment file: (Only add new image/tag, We don't change other code)
+- We can do Roll Out by using two approach:
+  1. **Offline way (That is add new version in YAML file and apply that file again)**
+    - Now i use new version image that version v2 in my Deployment file: (Only add new image/tag, We don't change other code)
   
-   ![version-2-deployment](https://github.com/user-attachments/assets/3bfa38a3-eaed-442a-9340-35a663ec95d5)
+      ![version-2-deployment](https://github.com/user-attachments/assets/3bfa38a3-eaed-442a-9340-35a663ec95d5)
 
-- We Just apply that file again:
+    - We Just apply that file again:
 
-      kubectl apply -f rolling-update.yml
+           kubectl apply -f rolling-update.yml
   
-  ![new-deploy-congi](https://github.com/user-attachments/assets/06a3962f-e861-4365-9c56-75ab777b42f5)
+      ![new-deploy-congi](https://github.com/user-attachments/assets/06a3962f-e861-4365-9c56-75ab777b42f5)
 
-- Now, Pods changing with new versions, 1st one new version v2 pod created then old version v1 pod deleted & then this process keep on running till all pods replaces with new version v2.
-- Here, Deployment Helps to ReplicSet to identify new version v2 pods and old version v1 pods for maintain desired numbers Pods using new/current version v2 of Pods
+    - Now, Pods changing with new versions, 1st one new version v2 pod created then old version v1 pod deleted & then this process keep on running till all pods replaces with new version v2.
+    - Here, Deployment Helps to ReplicSet to identify new version v2 pods and old version v1 pods for maintain desired numbers Pods using new/current version v2 of Pods
 
-      kubectl get pods -w
+           kubectl get pods -w
 
-  ![Pod-watch](https://github.com/user-attachments/assets/45f0f2e4-ad9c-47e8-b2a9-c8817008c8a8)
+      ![Pod-watch](https://github.com/user-attachments/assets/45f0f2e4-ad9c-47e8-b2a9-c8817008c8a8)
 
-- Here we see new version pods are running:
+    - Here we see new version pods are running:
   
-      kubectl get pods
+           kubectl get pods
 
-  ![pods-name](https://github.com/user-attachments/assets/e5d37849-7e96-4468-8587-a7e31e72263a)
+      ![pods-name](https://github.com/user-attachments/assets/e5d37849-7e96-4468-8587-a7e31e72263a)
 
-- Here we can see in the new version image show in Deployment Description:
+    - Here we can see in the new version image show in Deployment Description:
 
-      kubectl describe deploy ps-deploy
+           kubectl describe deploy ps-deploy
 
-  ![describe-v2](https://github.com/user-attachments/assets/023dc455-23c8-44f0-a29f-a9458b285080)
+      ![describe-v2](https://github.com/user-attachments/assets/023dc455-23c8-44f0-a29f-a9458b285080)
 
-- We see new version on Browser: (No Downtime new Version v2 comes, Client don't face any downtime, Same link same port we only rollout version v2)
+    - We see new version on Browser: (No Downtime new Version v2 comes, Client don't face any downtime, Same link same port we only rollout version v2)
 
-  ![new-v2-browser](https://github.com/user-attachments/assets/faafa3dc-723c-40d0-a065-7c493aedba52)
+      ![new-v2-browser](https://github.com/user-attachments/assets/faafa3dc-723c-40d0-a065-7c493aedba52)
 
-- Kubectl rollout status cmd:
+    - Kubectl rollout status cmd:
 
-      kubectl rollout status deploy ps-deploy
+           kubectl rollout status deploy ps-deploy
   
-   ![rollout-image-1](https://github.com/user-attachments/assets/e1634b62-b203-4c58-9688-fda50015499b)
+      ![rollout-image-1](https://github.com/user-attachments/assets/e1634b62-b203-4c58-9688-fda50015499b)
 
-- kubectl rollout history cmd:
+    - kubectl rollout history cmd:
 
-      kubectl rollout history deploy ps-deploy
+           kubectl rollout history deploy ps-deploy
 
-   ![rollout-2](https://github.com/user-attachments/assets/cf34e619-f8b4-4972-b69f-567effb177df)
+      ![rollout-2](https://github.com/user-attachments/assets/cf34e619-f8b4-4972-b69f-567effb177df)
 
 ## Step 3: Rollout to Version v3 using online way
 Here i use Online way to add new version/tag of image/app in my deployment file.
