@@ -180,9 +180,9 @@ Here i use Online way to add new version/tag of image/app in my deployment file.
 
 
 ## Step 4: RollBack or Undo:
-We can also here do RollBack by using two methods:
-1. Online way (Use kubectl rollout undo command)
-2. Offline way (Go inside YAMl file and update older version image tag)
+- We can also here do RollBack by using two methods:
+ 1. Online way (Use kubectl rollout undo command)
+ 2. Offline way (Go inside YAMl file and update older version image tag)
 
 - RoLL Back
 1. **Online Way:**
