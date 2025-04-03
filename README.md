@@ -149,6 +149,23 @@ For this Project i used minikube K8s platform.
 
    ![rollout-2](https://github.com/user-attachments/assets/cf34e619-f8b4-4972-b69f-567effb177df)
 
-## Step 3: Rollout to version v3 using online way
+## Step 3: Rollout to Version v3 using online way
 Here i use Online way to add new version/tag of image/app in my deployment file.
 
+- Here i use kubectl set command to set new version of image with respect to my Deployment Pod by using Container Name:
+
+      kubectl set image  deployment ps-deploy my-c1=pratikshinde55/apache-webserver:v3
+
+   ![New-v3-set](https://github.com/user-attachments/assets/2e2c9ea1-2dd6-410f-9079-d3a59c738b76)
+
+- We See in kubectl rollout status:
+
+      kubectl rollout status deployment ps-deploy
+
+    ![new-version-3-rollout](https://github.com/user-attachments/assets/0bb77571-c303-4499-9edc-8f325e63b39f)
+
+- we see also rollout history:
+
+      kubectl rollout history deployment ps-deploy
+
+   ![v3-history](https://github.com/user-attachments/assets/d112c599-0cda-4815-b3c7-7dee5ba1bb92)
