@@ -78,11 +78,11 @@ For this Project i used minikube K8s platform.
 
 - Run File with v1 /tag v1 of image:
 
-       kubectl apply -f rolling-update.yml
+      kubectl apply -f rolling-update.yml
 
 - Get Deploy cmd:
 
-       kubectl get deploy
+      kubectl get deploy
 
   ![Deploy-created](https://github.com/user-attachments/assets/9589c796-adcc-4613-b51e-7705b9f9e822)
 
