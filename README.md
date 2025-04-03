@@ -98,3 +98,7 @@ For this Project i used minikube K8s platform.
 
 - On Browser we see our server v1: (use node IP : NodePort No -->>  http://192.168.59.115:30055/)
   ![browesr-1-look](https://github.com/user-attachments/assets/538ea82f-1de7-420d-b4a0-177f330daa5d)
+
+
+## Step 2: Rollout with new version
+- Now i use new version image that version v2 in my Deployment file:
