@@ -136,3 +136,15 @@ For this Project i used minikube K8s platform.
 - We see new version on Browser: (No Downtime new Version v2 comes, Client don't face any downtime, Same link same port we only rollout version v2)
 
   ![new-v2-browser](https://github.com/user-attachments/assets/faafa3dc-723c-40d0-a065-7c493aedba52)
+
+- Kubectl rollout status cmd:
+
+      kubectl rollout status deploy ps-deploy
+  
+   ![rollout-image-1](https://github.com/user-attachments/assets/e1634b62-b203-4c58-9688-fda50015499b)
+
+- kubectl rollout histroy cmd:
+
+      kubectl rollout history deploy ps-deploy
+
+   ![rollout-2](https://github.com/user-attachments/assets/cf34e619-f8b4-4972-b69f-567effb177df)
