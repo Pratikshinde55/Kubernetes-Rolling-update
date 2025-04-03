@@ -105,7 +105,7 @@ For this Project i used minikube K8s platform.
 ## Step 2: Rollout with new version v2:
 We can do Roll Out by using two approach:
 1. **Offline way (That is add new version in YAML file and apply that file again)**
-    - Now i use new version image that version v2 in my Deployment file: (Only add new image/tag, We don't change other code)
+    - Now i use new version image that `Version v2` in my Deployment file: (Only add new image/tag, We don't change other code)
   
       ![version-2-deployment](https://github.com/user-attachments/assets/3bfa38a3-eaed-442a-9340-35a663ec95d5)
 
@@ -150,34 +150,34 @@ We can do Roll Out by using two approach:
 
       ![rollout-2](https://github.com/user-attachments/assets/cf34e619-f8b4-4972-b69f-567effb177df)
 
-## Step 3: Rollout to Version v3 using online way
-Here i use Online way to add new version/tag of image/app in my deployment file.
+2. **Rollout to Version v3 using online way:**
+    - Here i use Online way to add new version/tag of image/app in my deployment file.
 
-- Here i use kubectl set command to set new version of image with respect to my Deployment Pod by using Container Name:
+    - Here i use kubectl set command to set new version of image with respect to my Deployment Pod by using Container Name:
 
-      kubectl set image  deployment ps-deploy my-c1=pratikshinde55/apache-webserver:v3
+           kubectl set image  deployment ps-deploy my-c1=pratikshinde55/apache-webserver:v3
 
-   ![New-v3-set](https://github.com/user-attachments/assets/2e2c9ea1-2dd6-410f-9079-d3a59c738b76)
+      ![New-v3-set](https://github.com/user-attachments/assets/2e2c9ea1-2dd6-410f-9079-d3a59c738b76)
 
-- We See in kubectl rollout status:
+    - We See in kubectl rollout status:
 
-      kubectl rollout status deployment ps-deploy
+           kubectl rollout status deployment ps-deploy
 
-    ![new-version-3-rollout](https://github.com/user-attachments/assets/0bb77571-c303-4499-9edc-8f325e63b39f)
+      ![new-version-3-rollout](https://github.com/user-attachments/assets/0bb77571-c303-4499-9edc-8f325e63b39f)
 
-- we see also rollout history:
+    - we see also rollout history:
 
-      kubectl rollout history deployment ps-deploy
+           kubectl rollout history deployment ps-deploy
 
-   ![v3-history](https://github.com/user-attachments/assets/d112c599-0cda-4815-b3c7-7dee5ba1bb92)
+      ![v3-history](https://github.com/user-attachments/assets/d112c599-0cda-4815-b3c7-7dee5ba1bb92)
 
-- Also see in Deployment description the new image version added by using set commmand:
+    - Also see in Deployment description the new image version added by using set commmand:
 
-      kubectl describe deployment ps-deploy
+           kubectl describe deployment ps-deploy
   
-- New Version v3 see Client on Browser:
+    - New Version v3 see Client on Browser:
 
-   ![v3-browser-look](https://github.com/user-attachments/assets/95bc4a00-6568-41f4-a277-6908da5659a9)
+      ![v3-browser-look](https://github.com/user-attachments/assets/95bc4a00-6568-41f4-a277-6908da5659a9)
 
 
 ## Step 4: RollBack or Undo:
