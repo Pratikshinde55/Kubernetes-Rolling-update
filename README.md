@@ -170,7 +170,27 @@ Here i use Online way to add new version/tag of image/app in my deployment file.
 
    ![v3-history](https://github.com/user-attachments/assets/d112c599-0cda-4815-b3c7-7dee5ba1bb92)
 
+- Also see in Deployment description the new image version added by using set commmand:
+
+      kubectl describe deployment ps-deploy
+  
 - New Version v3 see Client on Browser:
 
    ![v3-browser-look](https://github.com/user-attachments/assets/95bc4a00-6568-41f4-a277-6908da5659a9)
-   
+
+
+## Step 4: RollBack or Undo:
+We can also here do RollBack by using two methods:
+1. Online way (Use kubectl rollout undo command)
+2. Offline way (Go inside YAMl file and update older version image tag)
+
+1. Online Way:
+     - kubectl rollout undo command:
+  
+       kubectl rollout undo deployment ps-deploy
+
+        ![kubectl-rollout-undo](https://github.com/user-attachments/assets/e20d50d9-ed6f-4619-ba4e-e483575256e3)
+            
+
+
+
