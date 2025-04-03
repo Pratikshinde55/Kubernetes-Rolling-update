@@ -1,0 +1,37 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ps-deploy
+spec:
+  strategy:
+    type: RollingUpdate
+  replicas: 4
+  selector:
+    matchLabels:
+      env: prod
+      auth: ps
+  template:
+    metadata:
+      labels:
+        auth: ps
+        env: prod
+    spec:
+      containers:
+        - name: "my-c1"
+          image: "pratikshinde55/apache-webserver:v2"
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: ps-deploy-svc
+spec:
+  type: NodePort
+  selector:
+    env: prod
+    auth: ps
+  ports:
+    - targetPort: 80
+      port: 1234
+      nodePort: 30055
