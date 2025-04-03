@@ -126,3 +126,9 @@ For this Project i used minikube K8s platform.
       kubectl get pods
 
   ![pods-name](https://github.com/user-attachments/assets/e5d37849-7e96-4468-8587-a7e31e72263a)
+
+- Here we can see in the new version image show in Deployment Description:
+
+      kubectl describe deploy ps-deploy
+
+  ![describe-v2](https://github.com/user-attachments/assets/023dc455-23c8-44f0-a29f-a9458b285080)
