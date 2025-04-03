@@ -78,16 +78,17 @@ For this Project i used minikube K8s platform.
 
 - Run File with v1 /tag v1 of image:
 
-        kubectl apply -f rolling-update.yml
+       kubectl apply -f rolling-update.yml
 
 - Get Deploy cmd:
 
-         kubectl get deploy
+       kubectl get deploy
 
   ![Deploy-created](https://github.com/user-attachments/assets/9589c796-adcc-4613-b51e-7705b9f9e822)
 
 - Describe Deploy we see version v1 of image is used:
 
-        kubectl describe deploy ps-deploy
+       kubectl describe deploy ps-deploy
 
+   ![image](https://github.com/user-attachments/assets/37700687-6273-4f92-9360-150e0d618812)
 
