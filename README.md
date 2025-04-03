@@ -120,3 +120,9 @@ For this Project i used minikube K8s platform.
       kubectl get pods -w
 
   ![Pod-watch](https://github.com/user-attachments/assets/45f0f2e4-ad9c-47e8-b2a9-c8817008c8a8)
+
+- Here we see new version pods are running:
+  
+      kubectl get pods
+
+  ![pods-name](https://github.com/user-attachments/assets/e5d37849-7e96-4468-8587-a7e31e72263a)
