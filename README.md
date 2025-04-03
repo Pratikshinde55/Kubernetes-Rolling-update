@@ -103,6 +103,7 @@ For this Project i used minikube K8s platform.
 
 
 ## Step 2: Rollout with new version v2:
+**Manual/Offline Way:
 - Now i use new version image that version v2 in my Deployment file: (Only add new image/tag, We don't change other code)
   
    ![version-2-deployment](https://github.com/user-attachments/assets/3bfa38a3-eaed-442a-9340-35a663ec95d5)
@@ -115,3 +116,7 @@ For this Project i used minikube K8s platform.
 
 - Now, Pods changing with new versions, 1st one new version v2 pod created then old version v1 pod deleted & then this process keep on running till all pods replaces with new version v2.
 - Here, Deployment Helps to ReplicSet to identify new version v2 pods and old version v1 pods for maintain desired numbers Pods using new/current version v2 of Pods
+
+      kubectl get pods -w
+
+  ![Pod-watch](https://github.com/user-attachments/assets/45f0f2e4-ad9c-47e8-b2a9-c8817008c8a8)
