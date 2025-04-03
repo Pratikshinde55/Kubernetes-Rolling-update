@@ -101,4 +101,7 @@ For this Project i used minikube K8s platform.
 
 
 ## Step 2: Rollout with new version
-- Now i use new version image that version v2 in my Deployment file:
+- Now i use new version image that version v2 in my Deployment file: (Only add new image/tag, We don't change other code)
+  ![version-2-deployment](https://github.com/user-attachments/assets/3bfa38a3-eaed-442a-9340-35a663ec95d5)
+
+- 
