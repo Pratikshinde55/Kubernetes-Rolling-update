@@ -103,7 +103,7 @@ For this Project i used minikube K8s platform.
 
 
 ## Step 2: Rollout with new version v2:
-**Manual/Offline Way:
+**Manual/Offline Way:**
 - Now i use new version image that version v2 in my Deployment file: (Only add new image/tag, We don't change other code)
   
    ![version-2-deployment](https://github.com/user-attachments/assets/3bfa38a3-eaed-442a-9340-35a663ec95d5)
@@ -148,3 +148,7 @@ For this Project i used minikube K8s platform.
       kubectl rollout history deploy ps-deploy
 
    ![rollout-2](https://github.com/user-attachments/assets/cf34e619-f8b4-4972-b69f-567effb177df)
+
+## Step 3: Rollout to version v3 using online way
+Here i use Online way to add new version/tag of image/app in my deployment file.
+
