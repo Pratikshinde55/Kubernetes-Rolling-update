@@ -95,3 +95,5 @@ For this Project i used minikube K8s platform.
 - Here we can also see that Deployment creates ReplicSet and ReplicaSet creates Pods; And we also created Service:
   ![Svc](https://github.com/user-attachments/assets/bc6696c8-7412-43c9-84ea-a74b1b98d47f)
 
+- On Browser we see our server v1: (use node IP : NodePort No -->>  http://192.168.59.115:30055/)
+  ![browesr-1-look](https://github.com/user-attachments/assets/538ea82f-1de7-420d-b4a0-177f330daa5d)
