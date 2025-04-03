@@ -2,11 +2,9 @@
 Here complete Practical details of Rollout & RollBack using K8s RollingUpdate Deployment Strategy.
 
 ## Steps:
-1. Create Deployment YAML file.
-2. Create Service YAMl Code using NodePort type.
-3. Roll out- Now we add new version of image in Deployment.
-4. Roll Back (Undo) -
-5. Automation file
+1. [Creating Deployment & Service resource type YAML file](#step-1)
+2. [Rollout with new Version](#step-2)
+3. [RollBack or Undo](#step-3)
 
 ***
 
@@ -73,7 +71,7 @@ version v4 -->> version v3        version v2 -->> version v1
 # Rolling Update Deployment Strategy working:
 For this Project i used minikube K8s platform.
 
-## Step 1: Deployment & Service resource type YAML file:
+## <a id="step-1"></a>Step 1: Creating Deployment & Service resource type YAML file:
 - Here i use Deployment resource type for create pods and monitoring desired state of pods use ReplicaSet in Deploymnet, & Create NodePort type service load balancer for outside world connectivity.
 
 - Here i use version v1 of image, Deployment keep on monitoring that image version.
@@ -105,7 +103,7 @@ For this Project i used minikube K8s platform.
   ![browesr-1-look](https://github.com/user-attachments/assets/538ea82f-1de7-420d-b4a0-177f330daa5d)
 
 
-## Step 2: Rollout with new Version:
+## <a id="step-2"></a>Step 2: Rollout with new Version:
 We can do Roll Out by using two approach:
 1. **Offline way (That is add new version in YAML file and apply that file again)**
     - Now i use new version image that `Version v2` in my Deployment file: (Only add new image/tag, We don't change other code)
@@ -183,7 +181,7 @@ We can do Roll Out by using two approach:
       ![v3-browser-look](https://github.com/user-attachments/assets/95bc4a00-6568-41f4-a277-6908da5659a9)
 
 
-## Step 3: RollBack or Undo:
+## <a id="step-3"></a>Step 3: RollBack or Undo:
 - We can also here do RollBack by using two methods:
  1. Online way (Use kubectl rollout undo command)
  2. Offline way (Go inside YAMl file and update older version image tag)
