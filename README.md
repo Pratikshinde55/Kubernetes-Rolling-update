@@ -1,5 +1,5 @@
 # Rolling Update Deployment:
-Here complete Practical details of Rollout & RollBack using K8s RollingUpdate Deployment Strategy.
+Here complete practical details of Rollout & RollBack using K8s RollingUpdate Deployment Strategy.
 
 ## Steps:
 1. [Creating Deployment & Service resource type YAML file](#step-1)
@@ -18,7 +18,7 @@ Switch to version v1 to version v2 or deploying new version is known as rollout.
 `version v1` -->> `version v2` -->> `version v3` 
 
 ## Rollback: [undo]
-Switch to older version like version v3 to version v2 this is rollback. This also known as undo in K8s.
+Switch to Older Version like `version v3` to `version v2` this is rollback. This also known as undo in K8s.
 
 `version v3` -->> `version v2`        `version v2` -->> `version v1`
 
@@ -56,13 +56,13 @@ Switch to older version like version v3 to version v2 this is rollback. This als
 
 ## Deployment: (Resource-type)
 - Deployment is one of the best resource type of K8s .
-- Deployment resource type gives RollingUpdate & Recreate Strategy.
+- Deployment resource type that gives RollingUpdate & Recreate Strategy.
 - Deployment also gives support ReplicaSet in-bild resorce type, So by using Deployment resource type we can easily maintain desired Pods numbers.
 - As we know, ReplicaSet does not know which is Older version-v1 which is newer version-v2, So while RollOut using RollingUpdate Strategy Deployment one who maintain or understand which is older version and which
   is newer version Pod, So Deployment Resource Type is used.
 - by default Strategy is RollingUpdate.
 
- **Deployment**  ---create--->>  **ReplicaSet**  ---create/maintain--->>  **Pods**  ---launch--->> **Container**  ---run--->>  **Application**
+ `Deployment`  ---create--->>  `ReplicaSet`  ---create/maintain--->>  `Pods`  ---launch--->> `Container`  ---run--->>  `Application`
   
 *** 
 
@@ -70,7 +70,7 @@ Switch to older version like version v3 to version v2 this is rollback. This als
 For this Project i used minikube K8s platform.
 
 ## <a id="step-1"></a>Step 1: Creating Deployment & Service resource type YAML file:
-- Here i use Deployment resource type for create pods and monitoring desired state of pods use ReplicaSet in Deploymnet, & Create NodePort type service load balancer for outside world connectivity.
+- Here i use Deployment resource type for create pods and monitoring desired state of pods using ReplicaSet in Deploymnet, & Create NodePort type service load balancer for outside World connectivity.
 
 - Here i use `version v1` of image, Deployment keep on monitoring that image version.
 
@@ -80,13 +80,13 @@ For this Project i used minikube K8s platform.
 
       kubectl apply -f rolling-update.yml
 
-- Get Deploy cmd:
+- Get Deployment command:
 
       kubectl get deploy
 
   ![Deploy-created](https://github.com/user-attachments/assets/9589c796-adcc-4613-b51e-7705b9f9e822)
 
-- Describe Deploy we see `version v1` of image is used:
+- Describe Deployment we see `version v1` of image is used:
 
       kubectl describe deploy ps-deploy
 
@@ -104,7 +104,7 @@ For this Project i used minikube K8s platform.
 ## <a id="step-2"></a>Step 2: Rollout with new Version:
 We can do Roll Out by using two approach:
 1. **Offline way (That is add new version in YAML file and apply that file again)**
-    - Now i use new version image that `Version v2` in my Deployment file: (Only add new image/tag, We don't change other code)
+    - Now i use new version image that `Version v2` in my Deployment file: (Only add new image/tag, We don't change other older code)
   
       ![version-2-deployment](https://github.com/user-attachments/assets/3bfa38a3-eaed-442a-9340-35a663ec95d5)
 
@@ -114,7 +114,7 @@ We can do Roll Out by using two approach:
   
       ![new-deploy-congi](https://github.com/user-attachments/assets/06a3962f-e861-4365-9c56-75ab777b42f5)
 
-    - Now, Pods changing with new versions, 1st one new `version v2` pod created then old `version v1` pod deleted & then this process keep on running till all pods replaces with new version v2.
+    - Now, Pods changing with new version, 1st one new `version v2` pod created then old `version v1` pod deleted & then this process keep on running till all pods replaces with new version v2.
     - Here, Deployment Helps to ReplicSet to identify new version v2 pods and old version v1 pods for maintain desired numbers Pods using new/current version v2 of Pods
 
            kubectl get pods -w
@@ -127,23 +127,23 @@ We can do Roll Out by using two approach:
 
       ![pods-name](https://github.com/user-attachments/assets/e5d37849-7e96-4468-8587-a7e31e72263a)
 
-    - Here we can see in the new version image show in Deployment Description:
+    - Here we can see in the new version of image show in Deployment Description:
 
            kubectl describe deploy ps-deploy
 
       ![describe-v2](https://github.com/user-attachments/assets/023dc455-23c8-44f0-a29f-a9458b285080)
 
-    - We see new version on Browser: (No Downtime new `Version v2` comes, Client don't face any downtime, Same link same port we only rollout `version v2`)
+    - We see new version of app on Browser: (No Downtime new `Version v2` comes, Client don't face any downtime, Same link same port we only rollout `version v2`)
 
       ![new-v2-browser](https://github.com/user-attachments/assets/faafa3dc-723c-40d0-a065-7c493aedba52)
 
-    - Kubectl rollout status cmd:
+    - Kubectl rollout status command: (Show live status of rollout or rollback) 
 
            kubectl rollout status deploy ps-deploy
   
       ![rollout-image-1](https://github.com/user-attachments/assets/e1634b62-b203-4c58-9688-fda50015499b)
 
-    - kubectl rollout history cmd:
+    - kubectl rollout history command:(Show all Rolling Update history)
 
            kubectl rollout history deploy ps-deploy
 
@@ -158,13 +158,13 @@ We can do Roll Out by using two approach:
 
       ![New-v3-set](https://github.com/user-attachments/assets/2e2c9ea1-2dd6-410f-9079-d3a59c738b76)
 
-    - We See in kubectl rollout status:
+    - We See in kubectl Rollout status:
 
            kubectl rollout status deployment ps-deploy
 
       ![new-version-3-rollout](https://github.com/user-attachments/assets/0bb77571-c303-4499-9edc-8f325e63b39f)
 
-    - we see also rollout history:
+    - we see also Rollout history:
 
            kubectl rollout history deployment ps-deploy
 
@@ -186,17 +186,17 @@ We can do Roll Out by using two approach:
 
 - RoLL Back
 1. **Online Way:**
-     - `kubectl rollout undo` command:(This command only do one roll back version that is `v3 to v2` for current project)
+     - `kubectl rollout undo command:(This command only do one roll back version that is `v3 to v2` for current project)
   
              kubectl rollout undo deployment ps-deploy
 
         ![kubectl-rollout-undo](https://github.com/user-attachments/assets/e20d50d9-ed6f-4619-ba4e-e483575256e3)
             
-     - see on Client side Browser Client see older `version v2` without downtime same things happens like RollOut:
+     - see on Client side Browser Client see older `version v2` without Downtime same things happens like RollOut:
 
       ![browser-rollback](https://github.com/user-attachments/assets/a8a9f3eb-5bf2-4643-949d-2084c3ea7ae2)
 
-     - Now i Direct Roll Back to `version v1` by using  `--to-revision=` this option:
+     - Now I Direct Roll Back to `version v1` by using  `--to-revision=` this option:
   
             kubectl rollout undo deployment ps-deploy  --to-revision=1
        
