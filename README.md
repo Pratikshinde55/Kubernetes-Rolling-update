@@ -185,7 +185,7 @@ We can also here do RollBack by using two methods:
 2. Offline way (Go inside YAMl file and update older version image tag)
 
 - RoLL Back
-1. Online Way:
+1. **Online Way:**
      - `kubectl rollout undo` command:(This command only do one roll back version that is v3 to v2 for current project)
   
              kubectl rollout undo deployment ps-deploy
@@ -206,7 +206,7 @@ We can also here do RollBack by using two methods:
 
         ![v1-broswer-byrollback-undo](https://github.com/user-attachments/assets/3446a5bb-f37d-4d98-94c6-924b570c50e3)
 
-2. We can do same roll back using offline file:
+2. **We can do same roll back using offline file:**
 
      - Go inside YAML file and add old version of image & then apply that YAML file
      - our RollBack completed 
