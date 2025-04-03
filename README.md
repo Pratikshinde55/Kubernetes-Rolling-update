@@ -102,7 +102,7 @@ For this Project i used minikube K8s platform.
   ![browesr-1-look](https://github.com/user-attachments/assets/538ea82f-1de7-420d-b4a0-177f330daa5d)
 
 
-## Step 2: Rollout with new version v2:
+## Step 2: Rollout with new Version:
 We can do Roll Out by using two approach:
 1. **Offline way (That is add new version in YAML file and apply that file again)**
     - Now i use new version image that `Version v2` in my Deployment file: (Only add new image/tag, We don't change other code)
@@ -180,7 +180,7 @@ We can do Roll Out by using two approach:
       ![v3-browser-look](https://github.com/user-attachments/assets/95bc4a00-6568-41f4-a277-6908da5659a9)
 
 
-## Step 4: RollBack or Undo:
+## Step 3: RollBack or Undo:
 - We can also here do RollBack by using two methods:
  1. Online way (Use kubectl rollout undo command)
  2. Offline way (Go inside YAMl file and update older version image tag)
