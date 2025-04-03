@@ -88,7 +88,10 @@ For this Project i used minikube K8s platform.
 
 - Describe Deploy we see version v1 of image is used:
 
-       kubectl describe deploy ps-deploy
+      kubectl describe deploy ps-deploy
 
-   ![image](https://github.com/user-attachments/assets/37700687-6273-4f92-9360-150e0d618812)
+   ![describe-deploy](https://github.com/user-attachments/assets/37700687-6273-4f92-9360-150e0d618812)
+
+- Here we can also see that Deployment creates ReplicSet and ReplicaSet creates Pods; And we also created Service:
+  ![Svc](https://github.com/user-attachments/assets/bc6696c8-7412-43c9-84ea-a74b1b98d47f)
 
