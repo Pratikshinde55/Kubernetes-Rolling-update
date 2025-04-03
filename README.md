@@ -1,5 +1,5 @@
 # Rolling Update Deployment:
-Here complte Practical details of Rollout & RollBack using K8s RollingUpdate Deployment Strategy.
+Here complete Practical details of Rollout & RollBack using K8s RollingUpdate Deployment Strategy.
 
 ## Steps:
 1. Create Deployment YAML file.
