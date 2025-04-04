@@ -2,8 +2,7 @@
 
 ![Kubernetes-RollingUpdate-Deployment-Strategy](https://github.com/user-attachments/assets/ad6a7824-affd-4925-9b99-579b3f5e73af)
 
-*Rolling Update Deployment:*
-Here complete practical details of Rollout & RollBack using K8s RollingUpdate Deployment Strategy.
+*Rolling Update Deployment: Here complete practical details of Rollout & RollBack using K8s RollingUpdate Deployment Strategy.*
 
 ## Steps:
 1. [Creating Deployment & Service resource type YAML file](#step-1)
